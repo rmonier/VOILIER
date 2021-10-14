@@ -49,8 +49,8 @@ int main()
 	
 	MyTimer_Struct_TypeDef timer_pwm = {
 		TIM3,
-		35999,
-		999 //PSC_FOR_CLOCK((1.0/100000.0)*1000.0, timer_pwm.ARR) // 100kHz en ms donc au final PSC à 999 (ici mis en dur pck petit bug de calcul avec la macro)
+		9,
+		71 //PSC_FOR_CLOCK((1.0/100000.0)*1000.0, timer_pwm.ARR) // 100kHz en ms donc au final PSC à 71 (ici mis en dur pck petit bug de calcul avec la macro)
 	};
 	MyTimer_Struct_TypeDef *pt_timer_pwm = &timer_pwm;
 	
@@ -66,7 +66,11 @@ int main()
 	
 	/* TESTS ADC *********************************/
 	
+	MyADC_Struct_TypeDef adc = { ADC1 };
 	
+	MyADC_Init(&adc, 1);
+	
+	uint16_t adc_val = MyADC_GetValue(&adc);
 	
 	/*********************************************/
 	
