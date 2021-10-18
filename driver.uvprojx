@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -408,6 +408,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_IMU.c</FilePath>
             </File>
+            <File>
+              <FileName>Driver_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_I2C.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -432,6 +437,11 @@
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Driver_I2C.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -845,6 +855,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_IMU.c</FilePath>
             </File>
+            <File>
+              <FileName>Driver_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_I2C.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -869,6 +884,11 @@
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Driver_I2C.h</FilePath>
             </File>
           </Files>
         </Group>
