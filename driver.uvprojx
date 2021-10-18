@@ -403,6 +403,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Driver_ADC.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Servo.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -829,6 +834,11 @@
               <FileName>Driver_ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Driver_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
           </Files>
         </Group>
