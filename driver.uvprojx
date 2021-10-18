@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -404,9 +404,14 @@
               <FilePath>.\Source\Driver_ADC.c</FilePath>
             </File>
             <File>
-              <FileName>Service_Servo.c</FileName>
+              <FileName>Service_IMU.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Service_Servo.c</FilePath>
+              <FilePath>.\Source\Service_IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -429,9 +434,20 @@
               <FilePath>.\Include\Driver_ADC.h</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Service_Servo.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Servo.h</FilePath>
+=======
+              <FileName>Service_IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_IMU.h</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Driver_I2C.h</FilePath>
+>>>>>>> db74bf44b0045cfe03fc6d4c4d05afcd39414438
             </File>
           </Files>
         </Group>
@@ -776,7 +792,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -841,9 +857,14 @@
               <FilePath>.\Source\Driver_ADC.c</FilePath>
             </File>
             <File>
-              <FileName>Service_Servo.c</FileName>
+              <FileName>Service_IMU.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Service_Servo.c</FilePath>
+              <FilePath>.\Source\Service_IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_I2C.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -866,9 +887,20 @@
               <FilePath>.\Include\Driver_ADC.h</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Service_Servo.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Servo.h</FilePath>
+=======
+              <FileName>Service_IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_IMU.h</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_I2C.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Driver_I2C.h</FilePath>
+>>>>>>> db74bf44b0045cfe03fc6d4c4d05afcd39414438
             </File>
           </Files>
         </Group>

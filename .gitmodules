@@ -1,0 +1,3 @@
+[submodule "Librairies/LSM9DS1"]
+	path = Librairies/LSM9DS1
+	url = https://github.com/STMicroelectronics/lsm9ds1

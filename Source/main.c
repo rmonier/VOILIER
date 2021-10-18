@@ -1,8 +1,10 @@
+#include <math.h>
+
 #include "Driver_GPIO.h"
 #include "Driver_Timer.h"
 #include "Driver_ADC.h"
 #include "Service_Servo.h"
-#include <math.h>
+#include "Service_IMU.h"
 
 void callbackTimer(void)
 {
@@ -76,13 +78,16 @@ int main()
 	
 	/*********************************************/
 	
-	
 	/* TESTS SERVO *********************************/
 		
 	MyServo_Init();
 	float angle_voile = 0;
 	
 		
+	/* TESTS SERVICE IMU *********************************/
+	
+	
+	
 	/*********************************************/
 	
 	do
