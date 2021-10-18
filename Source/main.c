@@ -1,6 +1,8 @@
 #include "Driver_GPIO.h"
 #include "Driver_Timer.h"
 #include "Driver_ADC.h"
+#include "Service_Servo.h"
+#include <math.h>
 
 void callbackTimer(void)
 {
@@ -39,7 +41,7 @@ int main()
 	MyTimer_Struct_TypeDef *pt_timer = &timer;
 	
 	MyTimer_Base_Init(pt_timer);
-	MvTimer_Base_Start(pt_timer);
+	MyTimer_Base_Start(pt_timer);
 
 	MyTimer_ActiveIT(timer.Timer, 8, callbackTimer);
 	
@@ -60,7 +62,7 @@ int main()
 	
 	MyTimer_PWM_SetCycle(pt_timer_pwm, 2, 0.2); // 20% sur channel 2
 	
-	MvTimer_Base_Start(pt_timer_pwm);
+	MyTimer_Base_Start(pt_timer_pwm);
 	
 	/*********************************************/
 	
@@ -72,6 +74,15 @@ int main()
 	
 	uint16_t adc_val = MyADC_GetValue(&adc);
 	
+	/*********************************************/
+	
+	
+	/* TESTS SERVO *********************************/
+		
+	MyServo_Init();
+	float angle_voile = 0;
+	
+		
 	/*********************************************/
 	
 	do
@@ -98,6 +109,19 @@ int main()
 		}
 
 		/*********************************************/
+		
+		/* TESTS SERVO *********************************/
+	
+
+		MyServo_Set(angle_voile);
+		angle_voile = fmod(angle_voile + 4.5,90); //Test les 20 positions sans débordement
+		int i = 0;
+		while (i < 7200000) {i++;} //Sleep pour étudier le moteur en temps réel
+    
+		
+	
+		/*********************************************/
+		
 	}	while(1);
 	
 	//return 0;
