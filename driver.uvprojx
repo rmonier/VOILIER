@@ -404,9 +404,9 @@
               <FilePath>.\Source\Driver_ADC.c</FilePath>
             </File>
             <File>
-              <FileName>Service_Servo.c</FileName>
+              <FileName>Service_IMU.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Service_Servo.c</FilePath>
+              <FilePath>.\Source\Service_IMU.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -427,6 +427,11 @@
               <FileName>Driver_ADC.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_ADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_IMU.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -771,7 +776,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -836,9 +841,9 @@
               <FilePath>.\Source\Driver_ADC.c</FilePath>
             </File>
             <File>
-              <FileName>Service_Servo.c</FileName>
+              <FileName>Service_IMU.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Service_Servo.c</FilePath>
+              <FilePath>.\Source\Service_IMU.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -859,6 +864,11 @@
               <FileName>Driver_ADC.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_ADC.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_IMU.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_IMU.h</FilePath>
             </File>
           </Files>
         </Group>

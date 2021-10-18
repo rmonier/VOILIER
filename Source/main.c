@@ -1,6 +1,7 @@
 #include "Driver_GPIO.h"
 #include "Driver_Timer.h"
 #include "Driver_ADC.h"
+#include "Service_IMU.h"
 
 void callbackTimer(void)
 {
@@ -71,6 +72,12 @@ int main()
 	MyADC_Init(&adc, 1);
 	
 	uint16_t adc_val = MyADC_GetValue(&adc);
+	
+	/*********************************************/
+	
+	/* TESTS SERVICE IMU *********************************/
+	
+	
 	
 	/*********************************************/
 	
