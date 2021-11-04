@@ -9,5 +9,6 @@ void test_GPIO_Timer();
 void test_PWM();
 void test_ADC();
 void test_IMU();
+void test_USART();
 
 #endif

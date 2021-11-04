@@ -25,7 +25,7 @@ typedef struct
 	*/
 void MyTimer_Base_Init(MyTimer_Struct_TypeDef *Timer);
 
-#define MyTimer_Base_Start(TimerStruct) (TimerStruct->Timer->CR1 |= TIM_CR1_CEN)
+#define MvTimer_Base_Start(TimerStruct) (TimerStruct->Timer->CR1 |= TIM_CR1_CEN)
 #define MyTimer_Base_Stop(TimerStruct) (TimerStruct->Timer->CR1 &= ~TIM_CR1_CEN)
 
 /**

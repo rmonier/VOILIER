@@ -413,6 +413,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
+            <File>
+              <FileName>Driver_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_USART.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -437,6 +442,8 @@
               <FileName>Service_Servo.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Servo.h</FilePath>
+            </File>
+            <File>
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
@@ -445,6 +452,11 @@
               <FileName>Driver_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_USART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Driver_USART.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -475,6 +487,11 @@
               <FileName>tests.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Tests\tests.h</FilePath>
+            </File>
+            <File>
+              <FileName>test_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -893,6 +910,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
+            <File>
+              <FileName>Driver_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Driver_USART.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -917,6 +939,8 @@
               <FileName>Service_Servo.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Servo.h</FilePath>
+            </File>
+            <File>
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
@@ -925,6 +949,11 @@
               <FileName>Driver_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_I2C.h</FilePath>
+            </File>
+            <File>
+              <FileName>Driver_USART.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Driver_USART.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -955,6 +984,11 @@
               <FileName>tests.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Tests\tests.h</FilePath>
+            </File>
+            <File>
+              <FileName>test_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_USART.c</FilePath>
             </File>
           </Files>
         </Group>
