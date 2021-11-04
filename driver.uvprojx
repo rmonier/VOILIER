@@ -413,6 +413,16 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Girouette.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -434,11 +444,11 @@
               <FilePath>.\Include\Driver_ADC.h</FilePath>
             </File>
             <File>
-<<<<<<< HEAD
               <FileName>Service_Servo.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Servo.h</FilePath>
-=======
+            </File>
+            <File>
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
@@ -447,7 +457,11 @@
               <FileName>Driver_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_I2C.h</FilePath>
->>>>>>> db74bf44b0045cfe03fc6d4c4d05afcd39414438
+            </File>
+            <File>
+              <FileName>Service_Girouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Girouette.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -866,6 +880,16 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Girouette.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -887,11 +911,11 @@
               <FilePath>.\Include\Driver_ADC.h</FilePath>
             </File>
             <File>
-<<<<<<< HEAD
               <FileName>Service_Servo.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Servo.h</FilePath>
-=======
+            </File>
+            <File>
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
@@ -900,7 +924,11 @@
               <FileName>Driver_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_I2C.h</FilePath>
->>>>>>> db74bf44b0045cfe03fc6d4c4d05afcd39414438
+            </File>
+            <File>
+              <FileName>Service_Girouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Girouette.h</FilePath>
             </File>
           </Files>
         </Group>

@@ -117,7 +117,7 @@ void MyTimer_PWM_SetCycle(MyTimer_Struct_TypeDef *Timer, char Channel, float cyc
 	switch(Channel) {
 		case 1:
 			Timer->Timer->CCR1 &= 0x0000;
-			Timer->Timer->CCR1 = 199;//(uint32_t)(cycle * Timer->ARR); // calcul du CCR
+			Timer->Timer->CCR1 = (uint32_t)(cycle * Timer->ARR); // calcul du CCR
 			break;
 		case 2:
 			Timer->Timer->CCR2 &= 0x0000;
@@ -130,6 +130,29 @@ void MyTimer_PWM_SetCycle(MyTimer_Struct_TypeDef *Timer, char Channel, float cyc
 		case 4:
 			Timer->Timer->CCR4 &= 0x0000;
 			Timer->Timer->CCR4 = (uint32_t)(cycle * Timer->ARR); // calcul du CCR
+			break;
+	}
+}
+
+void MyTimer_PWM_SetRawCycle(MyTimer_Struct_TypeDef *Timer, char Channel, uint32_t raw_cycle)
+{
+	// Configuration du rapport cyclique
+	switch(Channel) {
+		case 1:
+			Timer->Timer->CCR1 &= 0x0000;
+			Timer->Timer->CCR1 = raw_cycle; // calcul du CCR
+			break;
+		case 2:
+			Timer->Timer->CCR2 &= 0x0000;
+			Timer->Timer->CCR2 = raw_cycle; // calcul du CCR
+			break;
+		case 3:
+			Timer->Timer->CCR3 &= 0x0000;
+			Timer->Timer->CCR3 = raw_cycle; // calcul du CCR
+			break;
+		case 4:
+			Timer->Timer->CCR4 &= 0x0000;
+			Timer->Timer->CCR4 = raw_cycle; // calcul du CCR
 			break;
 	}
 }
@@ -186,3 +209,24 @@ void TIM4_IRQHandler(void)
 			(*IT_function_callback)();
 }
 
+void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer) {
+	
+	Timer->Timer->CCMR1 &= ~TIM_CCMR1_CC1S; // reset (clear) 
+	Timer->Timer->CCMR1 |= TIM_CCMR1_CC1S_0; 
+	Timer->Timer->CCMR1 &= ~TIM_CCMR1_CC2S;
+	Timer->Timer->CCMR1 |= TIM_CCMR1_CC2S_0; 
+	
+	Timer->Timer->CCMR1 &= ~TIM_CCMR1_IC1F;
+	Timer->Timer->CCMR1 &= ~TIM_CCMR1_IC2F;
+	
+	Timer->Timer->CCER |= TIM_CCER_CC1P ;
+	Timer->Timer->CCER &= ~TIM_CCER_CC1NP ;
+	Timer->Timer->CCER &= ~TIM_CCER_CC2P ;
+	Timer->Timer->CCER &= ~TIM_CCER_CC2NP ;
+
+	Timer->Timer->SMCR &= ~TIM_SMCR_SMS ;
+	Timer->Timer->SMCR |= TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1 ;
+	
+	Timer->Timer->CR1 |= TIM_CR1_CEN ;
+
+}

@@ -27,20 +27,32 @@ void MyServo_Set(float angle_voile)  //PWM en pas de 0.25 <=> résolution de teta
 	
 	if (angle_voile >= 0 || angle_voile <= 90) { //si la valeur n'est pas valide c'est tant pis
 			float teta;
-			float pourcent;
-			float rest;
+			uint32_t rawCycle;
 		
+			//tronque l'angle_voile en un mutliple de 4.5	
+			teta = angle_voile - fmod(angle_voile,4.5);
+			
+			//on map le teta à un pas particulier de l'ARR du Timer : ARR = 400 donc 0° => 10% => 40 et 90° => 5% => 20
+			teta = teta/4.5;
+			rawCycle = 40-teta;
+			MyTimer_PWM_SetRawCycle(pt_tim_servo, 2, rawCycle*10);
+	
+			/*
+			float rest;
 			//arrondi l'angle_voile en un mutliple de 4.5	
 	  	rest = fmod(angle_voile,4.5);
 			if ( fmod(angle_voile,4.5) < 2.25 ) {
-				teta = angle_voile - fmod(angle_voile,4.5);
+				teta = angle_voile - rest;
 			} else {
-				teta = angle_voile + 4.5 - fmod(angle_voile,4.5);
+				teta = angle_voile + 4.5 - rest;
 			}
-			
+			float pourcent;
 			//on map le teta à un pourcentage de la PWM : 0° => 10% et 90° => 5°
 			pourcent = 0.1 - ((teta/4.5)*0.0025);
-			MyTimer_PWM_SetCycle(pt_tim_servo, 2, pourcent); 
+			MyTimer_PWM_SetCycle(pt_tim_servo, 2, pourcent);
+	  	*/
+		
+			
 	}
 
 }

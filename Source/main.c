@@ -117,14 +117,11 @@ int main()
 		
 		/* TESTS SERVO *********************************/
 	
-
 		MyServo_Set(angle_voile);
 		angle_voile = fmod(angle_voile + 4.5,90); //Test les 20 positions sans débordement
 		int i = 0;
 		while (i < 7200000) {i++;} //Sleep pour étudier le moteur en temps réel
     
-		
-	
 		/*********************************************/
 		
 	}	while(1);
