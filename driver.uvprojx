@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1;.\Tests</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -442,6 +442,36 @@
               <FileName>Driver_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_I2C.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Tests</GroupName>
+          <Files>
+            <File>
+              <FileName>test_GPIO_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_GPIO_Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>tests.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tests\tests.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -786,7 +816,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1;.\Tests</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -889,6 +919,36 @@
               <FileName>Driver_I2C.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Driver_I2C.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Tests</GroupName>
+          <Files>
+            <File>
+              <FileName>test_GPIO_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_GPIO_Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>tests.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tests\tests.h</FilePath>
             </File>
           </Files>
         </Group>
