@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -434,6 +434,9 @@
               <FilePath>.\Include\Driver_ADC.h</FilePath>
             </File>
             <File>
+              <FileName>Service_Servo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Servo.h</FilePath>
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
@@ -911,6 +914,9 @@
               <FilePath>.\Include\Driver_ADC.h</FilePath>
             </File>
             <File>
+              <FileName>Service_Servo.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Servo.h</FilePath>
               <FileName>Service_IMU.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_IMU.h</FilePath>
