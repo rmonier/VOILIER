@@ -17,7 +17,7 @@ void test_PWM()
 	
 	MyTimer_PWM_SetCycle(pt_timer_pwm, 2, 0.2); // 20% sur channel 2
 	
-	MvTimer_Base_Start(pt_timer_pwm);
+	MyTimer_Base_Start(pt_timer_pwm);
 	
 	/*********************************************/
 }

@@ -38,7 +38,7 @@ void test_GPIO_Timer()
 	MyTimer_Struct_TypeDef *pt_timer = &timer;
 	
 	MyTimer_Base_Init(pt_timer);
-	MvTimer_Base_Start(pt_timer);
+	MyTimer_Base_Start(pt_timer);
 
 	MyTimer_ActiveIT(timer.Timer, 8, callbackTimer);
 	
