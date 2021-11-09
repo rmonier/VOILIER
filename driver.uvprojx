@@ -416,7 +416,7 @@
             <File>
               <FileName>Driver_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Driver_USART.c</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Source\Driver_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -456,7 +456,7 @@
             <File>
               <FileName>Driver_USART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Include\Driver_USART.h</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Include\Driver_USART.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -491,7 +491,7 @@
             <File>
               <FileName>test_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Tests\test_USART.c</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Tests\test_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -913,7 +913,7 @@
             <File>
               <FileName>Driver_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Driver_USART.c</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Source\Driver_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -953,7 +953,7 @@
             <File>
               <FileName>Driver_USART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Include\Driver_USART.h</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Include\Driver_USART.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -988,7 +988,7 @@
             <File>
               <FileName>test_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Tests\test_USART.c</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Tests\test_USART.c</FilePath>
             </File>
           </Files>
         </Group>
