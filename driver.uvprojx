@@ -428,6 +428,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Wheels.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Wheels.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -472,6 +477,11 @@
               <FileName>Service_Girouette.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Girouette.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Wheels.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Wheels.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -945,6 +955,11 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Wheels.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Wheels.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -989,6 +1004,11 @@
               <FileName>Service_Girouette.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Girouette.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Wheels.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Wheels.h</FilePath>
             </File>
           </Files>
         </Group>
