@@ -416,7 +416,17 @@
             <File>
               <FileName>Driver_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Source\Driver_USART.c</FilePath>
+              <FilePath>.\Source\Driver_USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Girouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -456,7 +466,12 @@
             <File>
               <FileName>Driver_USART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Include\Driver_USART.h</FilePath>
+              <FilePath>.\Include\Driver_USART.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Girouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Girouette.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -491,7 +506,12 @@
             <File>
               <FileName>test_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Tests\test_USART.c</FilePath>
+              <FilePath>.\Tests\test_USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_Servo.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -913,7 +933,17 @@
             <File>
               <FileName>Driver_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Source\Driver_USART.c</FilePath>
+              <FilePath>.\Source\Driver_USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Girouette.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Girouette.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -953,7 +983,12 @@
             <File>
               <FileName>Driver_USART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Include\Driver_USART.h</FilePath>
+              <FilePath>.\Include\Driver_USART.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Girouette.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Girouette.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -988,7 +1023,12 @@
             <File>
               <FileName>test_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Tests\test_USART.c</FilePath>
+              <FilePath>.\Tests\test_USART.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_Servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_Servo.c</FilePath>
             </File>
           </Files>
         </Group>
