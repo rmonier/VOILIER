@@ -11,5 +11,5 @@ void test_ADC();
 void test_IMU();
 void test_USART();
 void test_Servo();
-
+void test_Communication();
 #endif

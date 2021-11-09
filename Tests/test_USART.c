@@ -1,9 +1,13 @@
 #include "Driver_USART.h"
 
+#if 0
 void UART_callback(char character)
 {	
 	MyUART_Send_Message("INTERRUPT\n");
+	//init servo
+	//Utilisation servo
 }
+
 
 void test_USART()
 {
@@ -22,3 +26,4 @@ void test_USART()
 		
 	}	while(1);
 }
+#endif
