@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1;.\Tests</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -414,14 +414,9 @@
               <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
             <File>
-              <FileName>Service_Servo.c</FileName>
+              <FileName>Driver_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Service_Servo.c</FilePath>
-            </File>
-            <File>
-              <FileName>Service_Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Service_Girouette.c</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Source\Driver_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -459,9 +454,44 @@
               <FilePath>.\Include\Driver_I2C.h</FilePath>
             </File>
             <File>
-              <FileName>Service_Girouette.h</FileName>
+              <FileName>Driver_USART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Include\Service_Girouette.h</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Include\Driver_USART.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Tests</GroupName>
+          <Files>
+            <File>
+              <FileName>test_GPIO_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_GPIO_Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>tests.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tests\tests.h</FilePath>
+            </File>
+            <File>
+              <FileName>test_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Tests\test_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -806,7 +836,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\Include;.\Librairies\LSM9DS1</IncludePath>
+              <IncludePath>.\Include;.\Librairies\LSM9DS1;.\Tests</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -881,14 +911,9 @@
               <FilePath>.\Source\Driver_I2C.c</FilePath>
             </File>
             <File>
-              <FileName>Service_Servo.c</FileName>
+              <FileName>Driver_USART.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Source\Service_Servo.c</FilePath>
-            </File>
-            <File>
-              <FileName>Service_Girouette.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Source\Service_Girouette.c</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Source\Driver_USART.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -926,9 +951,44 @@
               <FilePath>.\Include\Driver_I2C.h</FilePath>
             </File>
             <File>
-              <FileName>Service_Girouette.h</FileName>
+              <FileName>Driver_USART.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\Include\Service_Girouette.h</FilePath>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Include\Driver_USART.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Tests</GroupName>
+          <Files>
+            <File>
+              <FileName>test_GPIO_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_GPIO_Timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_PWM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_PWM.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_IMU.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_IMU.c</FilePath>
+            </File>
+            <File>
+              <FileName>tests.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Tests\tests.h</FilePath>
+            </File>
+            <File>
+              <FileName>test_USART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>\\netapp2\rmonier\Documents\4IR\INFOMAT\DRIVERS\Tests\test_USART.c</FilePath>
             </File>
           </Files>
         </Group>

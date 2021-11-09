@@ -9,17 +9,17 @@
 
 typedef struct
 {
-	TIM_TypeDef *Timer; // TIM1 à TIM4
-	unsigned short ARR; // ~ au + cest grand au - le compteur sera précis (en terme d'erreur), mais au + le temps pourra etre long (max 0xFFFF)
+	TIM_TypeDef *Timer; // TIM1 ï¿½ TIM4
+	unsigned short ARR; // ~ au + cest grand au - le compteur sera prï¿½cis (en terme d'erreur), mais au + le temps pourra etre long (max 0xFFFF)
 	unsigned short PSC;
 } MyTimer_Struct_TypeDef;
 
 /**
 	**********************************************************************************************
 	* @brief
-	* @param	-> Paramètre sous forme d'une structure (son adresse) contenant les
+	* @param	-> Paramï¿½tre sous forme d'une structure (son adresse) contenant les
 	* 					informations de base
-	* @Note 	-> Fonction à lancer systématiquement avant d'aller plus en détail dans les
+	* @Note 	-> Fonction ï¿½ lancer systï¿½matiquement avant d'aller plus en dï¿½tail dans les
 	* 				 conf plus fines (PWM, codeur inc...)
 	************************************************************************************************
 	*/
@@ -41,9 +41,9 @@ void MyTimer_ActiveIT(TIM_TypeDef *Timer, char Prio, void (*IT_function)(void));
 /**
 	* @brief
 	* @param 
-	* @Note Active le channel spécifié sur Timer le timer spécifié
-	* la gestion de la configuration I/O n’est pas faite dans cette fonction
-	* ni le réglage de la période de la PWM (ARR, PSC)
+	* @Note Active le channel spï¿½cifiï¿½ sur Timer le timer spï¿½cifiï¿½
+	* la gestion de la configuration I/O nï¿½est pas faite dans cette fonction
+	* ni le rï¿½glage de la pï¿½riode de la PWM (ARR, PSC)
 	*/
 void MyTimer_PWM(TIM_TypeDef *Timer, char Channel);
 
