@@ -1,5 +1,6 @@
 #include "Service_Communication.h"
 
+#if 0
 void test_Communication()
 {	
 	/* TESTS COMMUNICATION *********************************/
@@ -19,3 +20,5 @@ void test_Communication()
 	
 
 }
+
+#endif

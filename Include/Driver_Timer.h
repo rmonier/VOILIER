@@ -9,7 +9,7 @@
 
 typedef struct
 {
-	TIM_TypeDef *Timer; // TIM1 � TIM4
+	TIM_TypeDef *Timer; // TIM1 à TIM4
 	unsigned short ARR; // ~ au + cest grand au - le compteur sera pr�cis (en terme d'erreur), mais au + le temps pourra etre long (max 0xFFFF)
 	unsigned short PSC;
 } MyTimer_Struct_TypeDef;
@@ -17,9 +17,9 @@ typedef struct
 /**
 	**********************************************************************************************
 	* @brief
-	* @param	-> Param�tre sous forme d'une structure (son adresse) contenant les
+	* @param	-> Paramètre sous forme d'une structure (son adresse) contenant les
 	* 					informations de base
-	* @Note 	-> Fonction � lancer syst�matiquement avant d'aller plus en d�tail dans les
+	* @Note 	-> Fonction à lancer syst�matiquement avant d'aller plus en d�tail dans les
 	* 				 conf plus fines (PWM, codeur inc...)
 	************************************************************************************************
 	*/

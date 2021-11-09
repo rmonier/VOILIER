@@ -1,24 +1,32 @@
 #include "Service_Communication.h"
 
-int horaire = 1;
-int speed_ratio = 0;
+static int horaire = 1;
+static float speed_ratio = 0.0;
+
+MyUSART_Struct_TypeDef uart = {
+	USART1,
+	9600
+};
+
+void (*callback_com)();
 
 void UART_callback(char character)
 {	
-	MyUART_Send_Message("INTERRUPT\n");
+	//MyUART_Send_Message("INTERRUPT\n");
 	short data = (short)character;
-	Communication_Update_Parameters(data); // 0 => entre 0 et 256 via get_data
+	if (data != 95)	{
+		Communication_Update_Parameters(data);
+		callback_com();
+	}
 }
 
 void Communication_Update_Parameters(short data)
 {
-	int speed = data - 128;
-	
-	if(speed < 0) {
-		speed_ratio = -(data * 100 / 256);
+	if(data > 128) {
+		speed_ratio = ((256 - data) * 100.0 / 128.0) / 100.0;
 		horaire = 0;
 	} else {
-		speed_ratio	= (data * 100 / 256);
+		speed_ratio	= (data * 100.0 / 128.0) / 100.0;
 		horaire = 1;
 	}
 }
@@ -28,13 +36,14 @@ int Communication_Is_Horaire()
 	return horaire;
 }
 
-int Communication_Get_Speed_Ration()
+float Communication_Get_Speed_Ratio()
 {
 	return speed_ratio;
 }
 
-void MyCommunication_Init(USART_TypeDef * uart, int rate)
+void MyCommunication_Init(void (*callback)())
 {
-	MyUART_Init(uart, rate);
-	MyUART_Transmission_Init(UART_callback);
+	callback_com = callback;
+	MyUART_Init(&uart);
+	MyUART_Transmission_Init(&uart, UART_callback);
 }

@@ -6,12 +6,12 @@
 #define CHANNEL_WHEELS_PWM 2
 
 #define GPIO_WHEELS_PWM_DIR GPIOA
-#define GPIO_WHEELS_PWM_DIR_PIN 10
+#define GPIO_WHEELS_PWM_DIR_PIN 11
 
 MyTimer_Struct_TypeDef timer_wheels = {
 	TIMER_WHEELS_PWM,
-	35,
-	99 //PSC_FOR_CLOCK((1.0/100000.0)*20000.0, timer_pwm.ARR) // 20kHz en ms donc au final PSC à 99 (ici mis en dur pck petit bug de calcul avec la macro)
+	225,
+	16 //PSC_FOR_CLOCK((1.0/100000.0)*20000.0, timer_pwm.ARR) // 20kHz en ms donc au final PSC à 16 (ici mis en dur pck petit bug de calcul avec la macro)
 };
 MyTimer_Struct_TypeDef *pt_timer_wheels = &timer_wheels;
 	
@@ -24,7 +24,7 @@ MyGPIO_Struct_TypeDef direction = {
 void Wheels_Init()
 {
 	MyTimer_Base_Init(pt_timer_wheels);
-	MyTimer_PWM(pt_timer_wheels->Timer, CHANNEL_WHEELS_PWM);
+	MyTimer_PWM(pt_timer_wheels->Timer, CHANNEL_WHEELS_PWM); // PA1
 	MyGPIO_Init(&direction);	
 }
 

@@ -432,6 +432,8 @@
               <FileName>Service_Communication.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Communication.c</FilePath>
+            </File>
+            <File>
               <FileName>Service_Wheels.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Wheels.c</FilePath>
@@ -485,6 +487,8 @@
               <FileName>Service_Communication.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Communication.h</FilePath>
+            </File>
+            <File>
               <FileName>Service_Wheels.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Wheels.h</FilePath>
@@ -970,6 +974,8 @@
               <FileName>Service_Communication.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Communication.c</FilePath>
+            </File>
+            <File>
               <FileName>Service_Wheels.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Wheels.c</FilePath>
@@ -1023,6 +1029,8 @@
               <FileName>Service_Communication.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Communication.h</FilePath>
+            </File>
+            <File>
               <FileName>Service_Wheels.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Wheels.h</FilePath>

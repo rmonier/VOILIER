@@ -3,13 +3,9 @@
 
 #include "Driver_USART.h"
 
-
 void Communication_Update_Parameters(short data);
-
 int Communication_Is_Horaire();
-
-int Communication_Get_Speed_Ration();
-
-void MyCommunication_Init(USART_TypeDef * uart, int rate);
+float Communication_Get_Speed_Ratio();
+void MyCommunication_Init(void (*callback)());
 
 #endif
