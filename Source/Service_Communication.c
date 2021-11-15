@@ -14,7 +14,7 @@ void UART_callback(char character)
 {	
 	//MyUART_Send_Message("INTERRUPT\n");
 	short data = (short)character;
-	if (data != 95)	{
+	if (data != 95)	{ // ignore the underscores triggered everytime
 		Communication_Update_Parameters(data);
 		callback_com();
 	}
@@ -41,9 +41,17 @@ float Communication_Get_Speed_Ratio()
 	return speed_ratio;
 }
 
+/**
+	* Set a callback to handle each reception of data
+	*/
 void MyCommunication_Init(void (*callback)())
 {
 	callback_com = callback;
 	MyUART_Init(&uart);
 	MyUART_Transmission_Init(&uart, UART_callback);
+}
+
+void Communication_Display_Message(char *message)
+{
+	MyUART_Send_Message(&uart, message);
 }

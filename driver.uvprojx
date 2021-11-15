@@ -438,6 +438,16 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Wheels.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Batterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Batterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -492,6 +502,16 @@
               <FileName>Service_Wheels.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Wheels.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Batterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Batterie.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Timer.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -980,6 +1000,16 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Wheels.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Batterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Batterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1034,6 +1064,16 @@
               <FileName>Service_Wheels.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Wheels.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Batterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Batterie.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Timer.h</FilePath>
             </File>
           </Files>
         </Group>
