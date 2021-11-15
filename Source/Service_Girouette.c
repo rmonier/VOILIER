@@ -5,7 +5,7 @@
 MyTimer_Struct_TypeDef tim_girouette = {
 		TIM4,
 	  1439, //360*4 car 1/4 de degré de résolution
-		3 //il comptera tout les 4 tics d'horloge
+		0 //il comptera tout les 4 tics d'horloge
 };
 MyTimer_Struct_TypeDef *pt_tim_girouette = &tim_girouette;
 

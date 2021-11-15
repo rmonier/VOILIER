@@ -226,7 +226,7 @@ void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer, void (*IT_function)(voi
 	Timer->Timer->CCER &= ~TIM_CCER_CC2NP ;
 
 	Timer->Timer->SMCR &= ~TIM_SMCR_SMS ;
-	Timer->Timer->SMCR |= TIM_SMCR_SMS_0; //| TIM_SMCR_SMS_1 ;
+	Timer->Timer->SMCR |= TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1 ;
 	
 	Timer->Timer->CR1 |= TIM_CR1_CEN ;
 	

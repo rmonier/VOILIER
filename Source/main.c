@@ -41,7 +41,7 @@ void Handle_Batterie_Display()
 {	
 	/* USE USART DISPLAY TO GET BATTERY IN PERCENT */
 	char message[255];
-	sprintf(message, "Batterie : %d%%", Batterie_Get_Value());
+	sprintf(message, "Batterie : %d%%\n", Batterie_Get_Value());
 	Communication_Display_Message(message);
 }
 
@@ -55,6 +55,7 @@ int main()
 	/* HANDLE THE BATTERY */
 	
 	Batterie_Init();
+	Handle_Batterie_Display();
 	Timer_Start_Interruption(2000, Handle_Batterie_Display);
 	
 	/* HANDLE IMU */
