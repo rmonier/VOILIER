@@ -209,7 +209,8 @@ void TIM4_IRQHandler(void)
 			(*IT_function_callback)();
 }
 
-void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer) {
+void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer, void (*IT_function)(void))
+{
 	
 	Timer->Timer->CCMR1 &= ~TIM_CCMR1_CC1S; // reset (clear) 
 	Timer->Timer->CCMR1 |= TIM_CCMR1_CC1S_0; 
@@ -219,14 +220,44 @@ void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer) {
 	Timer->Timer->CCMR1 &= ~TIM_CCMR1_IC1F;
 	Timer->Timer->CCMR1 &= ~TIM_CCMR1_IC2F;
 	
-	Timer->Timer->CCER |= TIM_CCER_CC1P ;
+	Timer->Timer->CCER &= ~TIM_CCER_CC1P ;
 	Timer->Timer->CCER &= ~TIM_CCER_CC1NP ;
 	Timer->Timer->CCER &= ~TIM_CCER_CC2P ;
 	Timer->Timer->CCER &= ~TIM_CCER_CC2NP ;
 
 	Timer->Timer->SMCR &= ~TIM_SMCR_SMS ;
-	Timer->Timer->SMCR |= TIM_SMCR_SMS_0 | TIM_SMCR_SMS_1 ;
+	Timer->Timer->SMCR |= TIM_SMCR_SMS_0; //| TIM_SMCR_SMS_1 ;
 	
 	Timer->Timer->CR1 |= TIM_CR1_CEN ;
-
+	
+	//INTERRUPTION QUAND IDX (CH3 du TIM4) PASSE à 1
+	RCC->APB2ENR |=	RCC_APB2ENR_AFIOEN; //Alternate function IO clock enable
+	AFIO->EXTICR[2] |= AFIO_EXTICR3_EXTI8_PB; //Active AFIO du pin PB8 <=> idx
+	
+	EXTI->IMR |= EXTI_IMR_MR8; //Active Interruption du pin 8
+	EXTI->RTSR |= EXTI_RTSR_TR8; //Interruption quand idxpasse de 0 à 1
+	EXTI->FTSR &= ~EXTI_FTSR_TR8; //pas d'interruption quand idx passe de 1 à 0
+	
+	NVIC_EnableIRQ(EXTI9_5_IRQn); // on active l'interruption (coté ARM)
+	NVIC_SetPriority(EXTI9_5_IRQn, 1);
+	IT_function_callback = IT_function; // on récup la fonction d'interruption
 }
+
+void EXTI9_5_IRQHandler(void)
+{
+	EXTI->PR |= 1; //reset flag
+	if(IT_function_callback != 0)
+		(*IT_function_callback)();
+}
+
+void MyTimer_Reset_Counter(MyTimer_Struct_TypeDef *Timer)
+{
+	Timer->Timer->CNT &= ~TIM_CNT_CNT;
+}
+
+
+uint16_t MyTimer_Get_Counter(MyTimer_Struct_TypeDef *Timer)
+{
+	return Timer->Timer->CNT ;
+}
+

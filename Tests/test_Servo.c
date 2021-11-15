@@ -1,4 +1,5 @@
 #include "Service_Servo.h"
+#include <math.h>
 
 void test_Servo()
 {	

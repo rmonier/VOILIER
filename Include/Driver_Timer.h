@@ -51,6 +51,9 @@ void MyTimer_PWM(TIM_TypeDef *Timer, char Channel);
 void MyTimer_PWM_SetCycle(MyTimer_Struct_TypeDef *Timer, char Channel, float cycle);
 void MyTimer_PWM_SetRawCycle(MyTimer_Struct_TypeDef *Timer, char Channel, uint32_t raw_cycle);
 
-void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer);
+void MyTimer_Encoder_Init(MyTimer_Struct_TypeDef *Timer, void (*IT_function)(void));
+
+void MyTimer_Reset_Counter(MyTimer_Struct_TypeDef *Timer);
+uint16_t MyTimer_Get_Counter(MyTimer_Struct_TypeDef *Timer);
 
 #endif
