@@ -1,4 +1,9 @@
+#include <stdio.h>
 #include "tests.h"
+#include "Service_Wheels.h"
+#include "Service_Communication.h"
+#include "Service_Batterie.h"
+#include "Service_Timer.h"
 #include "Service_Servo.h"
 #include "Service_Girouette.h"
 
@@ -18,8 +23,45 @@ int Angle_Voile(int angle_girouette) {
 	return (int)angle_voile;
 }
 
-int main()
+void Handle_Wheels()
 {
+	/* RETRIEVE REMOTE CONTROL DATA via USART */
+	
+	int isHoraire = Communication_Is_Horaire();
+	float speed_ratio = Communication_Get_Speed_Ratio();
+	
+	/* UPDATE WHEELS PARAMETERS */
+	
+	Wheels_Stop();
+	Wheels_Set_Parameters(speed_ratio, isHoraire);
+	Wheels_Start();
+}
+
+void Handle_Batterie_Display()
+{	
+	/* USE USART DISPLAY TO GET BATTERY IN PERCENT */
+	char message[255];
+	sprintf(message, "Batterie : %d%%", Batterie_Get_Value());
+	Communication_Display_Message(message);
+}
+
+int main()
+{	
+	/* HANDLE THE WHEELS WITH USART DEVICE */
+	
+	Wheels_Init();
+	MyCommunication_Init(Handle_Wheels);
+	
+	/* HANDLE THE BATTERY */
+	
+	Batterie_Init();
+	Timer_Start_Interruption(2000, Handle_Batterie_Display);
+	
+	/* HANDLE IMU */
+	
+	
+	
+	/* HANDLE GIROUETTE */
 	
 	MyServo_Init();
 	MyGirouette_Init();
@@ -32,14 +74,6 @@ int main()
 		MyServo_Set(angle_voile);
 		
 	} while(1);
-	
-	
-	//test_PWM();
-	//test_ADC();
-	//test_IMU();
-	//test_GPIO_Timer();
-	//test_USART();
-	//test_Servo();
 	
 	return 0;
 }

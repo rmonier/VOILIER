@@ -428,6 +428,26 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Communication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Communication.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Wheels.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Wheels.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Batterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Batterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -473,6 +493,26 @@
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Girouette.h</FilePath>
             </File>
+            <File>
+              <FileName>Service_Communication.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Communication.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Wheels.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Wheels.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Batterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Batterie.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Timer.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -512,6 +552,11 @@
               <FileName>test_Servo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Tests\test_Servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_Communication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_Communication.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -945,6 +990,26 @@
               <FileType>1</FileType>
               <FilePath>.\Source\Service_Servo.c</FilePath>
             </File>
+            <File>
+              <FileName>Service_Communication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Communication.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Wheels.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Wheels.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Batterie.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Batterie.c</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Source\Service_Timer.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -990,6 +1055,26 @@
               <FileType>5</FileType>
               <FilePath>.\Include\Service_Girouette.h</FilePath>
             </File>
+            <File>
+              <FileName>Service_Communication.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Communication.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Wheels.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Wheels.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Batterie.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Batterie.h</FilePath>
+            </File>
+            <File>
+              <FileName>Service_Timer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Include\Service_Timer.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1029,6 +1114,11 @@
               <FileName>test_Servo.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Tests\test_Servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>test_Communication.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Tests\test_Communication.c</FilePath>
             </File>
           </Files>
         </Group>

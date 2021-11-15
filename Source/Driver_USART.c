@@ -1,16 +1,14 @@
 #include "Driver_USART.h"
 #include "Driver_GPIO.h"
 
-USART_TypeDef * UART;
 void (*USART_function_callback)(char);
 
-
-void MyUART_Init(USART_TypeDef * uart, int rate /*rien (UART fixé) ou UART au choix de l'user, Bd rate voulu en int*/)
+void MyUART_Init(MyUSART_Struct_TypeDef *uart)
 {	
-	UART = uart;
 	MyGPIO_Struct_TypeDef TX, RX;
-	//Activation et gonfiguration GPIO
-	switch((int)UART)
+	
+	// Activation et gonfiguration GPIO
+	switch((int)uart->USART)
 	{
 		case (int)USART1:
 			TX.GPIO = GPIOA;
@@ -43,10 +41,12 @@ void MyUART_Init(USART_TypeDef * uart, int rate /*rien (UART fixé) ou UART au ch
 			NVIC_SetPriority(USART3_IRQn, 8);		
 			break;
 	}
-	MyGPIO_Init(&TX); MyGPIO_Init(&RX);
+	
+	MyGPIO_Init(&TX);
+	MyGPIO_Init(&RX);
 
-	//Activation clock USART
-	switch((int)UART)
+	// Activation clock USART
+	switch((int)uart->USART)
 	{
 		case (int)USART1:
 			RCC->APB2ENR |= RCC_APB2ENR_USART1EN;
@@ -59,74 +59,77 @@ void MyUART_Init(USART_TypeDef * uart, int rate /*rien (UART fixé) ou UART au ch
 			break;
 	}
 
-	//Activation de l'UART
-	UART->CR1 |= USART_CR1_UE;
+	// Activation de l'UART
+	uart->USART->CR1 |= USART_CR1_UE;
 	
-	//Longueur mot (ici 8 bits)
-	UART->CR1 &=~USART_CR1_M;
+	// Longueur mot (ici 8 bits)
+	uart->USART->CR1 &=~USART_CR1_M;
 	
-	//Nombre de stop bits à 1
-	UART->CR2 &=~USART_CR2_STOP;
+	// Nombre de stop bits à 1
+	uart->USART->CR2 &=~USART_CR2_STOP;
 	
-	//Baud Rate de 9600 Bd 
-	//Clock en Hz/ Bd rate voulu
-	switch((int)UART)
+	// Baud Rate de 9600 Bd 
+	// Clock en Hz / Bd rate voulu
+	switch((int)uart->USART)
 	{
 		case (int)USART1:
-			UART->BRR = SystemCoreClock/rate; //72MHz
+			uart->USART->BRR = SystemCoreClock/uart->baudRate; // 72MHz
 			break;
 		default:
-			UART->BRR = (SystemCoreClock/2)/rate; //36MHz
+			uart->USART->BRR = (SystemCoreClock/2)/uart->baudRate; // 36MHz
 			break;
 	}
 }
 
-void MyUART_Transmission_Init(void (*IT_function)(char))
+void MyUART_Transmission_Init(MyUSART_Struct_TypeDef *uart, void (*IT_function)(char))
 {
 	USART_function_callback = IT_function;
-	//Active l'uart pour émission/Réception
-	UART->CR1 |= USART_CR1_RE;
-	UART->CR1 |= USART_CR1_TE;
-
-	//Active l'interrupt quand le buffer de réception se remplit
 	
-	UART->CR1 |= USART_CR1_RXNEIE;
+	// Active l'uart pour émission/Réception
+	uart->USART->CR1 |= USART_CR1_RE;
+	uart->USART->CR1 |= USART_CR1_TE;
+
+	// Active l'interrupt quand le buffer de réception se remplit
+	uart->USART->CR1 |= USART_CR1_RXNEIE;
 }
 
-static void SendChar(char character)
+static void SendChar(MyUSART_Struct_TypeDef *uart, char character)
 {
-	while(!(UART->SR & USART_SR_TXE));
-	UART->DR = character;
-	}
+	while(!(uart->USART->SR & USART_SR_TXE));
+	uart->USART->DR = character;
+}
 
 
-void MyUART_Send_Message(char message[])
+void MyUART_Send_Message(MyUSART_Struct_TypeDef *uart, char message[])
 {
-	int i=0;
-	do
-	{SendChar(message[i]); i++;	
-	}while (message[i]!='\0');
+	int i = 0;
+	do {
+		SendChar(uart, message[i]);
+		i++;	
+	} while (message[i] != '\0');
 }
 
 void USART1_IRQHandler(void)
-{		if (UART->SR & USART_SR_RXNE){
-			UART->SR &= ~USART_SR_RXNE; // on reset le callback
-		}
-			
-			(*USART_function_callback)(UART->DR);
+{		
+	if (USART1->SR & USART_SR_RXNE) {
+		USART1->SR &= ~USART_SR_RXNE; // on reset le callback
+	}
+	(*USART_function_callback)(USART1->DR);
 }
 
 void USART2_IRQHandler(void)
-{		if (UART->SR & USART_SR_RXNE){
-			UART->SR &= ~USART_SR_RXNE; // on reset le callback
-		}
-			(*USART_function_callback)(UART->DR);
+{		
+	if (USART2->SR & USART_SR_RXNE) {
+		USART2->SR &= ~USART_SR_RXNE; // on reset le callback
+	}
+	(*USART_function_callback)(USART2->DR);
 }
 
 void USART3_IRQHandler(void)
-{		if (UART->SR & USART_SR_RXNE){
-			UART->SR &= ~USART_SR_RXNE; // on reset le callback
-		}
-     //appeler une fonction qui utilise un char comme handler
-			(*USART_function_callback)(UART->DR);
+{		
+	if (USART3->SR & USART_SR_RXNE) {
+		USART3->SR &= ~USART_SR_RXNE; // on reset le callback
+	}
+	// appeler une fonction qui utilise un char (val reçue) comme handler
+	(*USART_function_callback)(USART3->DR);
 }
