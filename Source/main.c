@@ -53,14 +53,23 @@ int main()
 	MyCommunication_Init(Handle_Wheels);
 	
 	/* HANDLE THE BATTERY */
+
+	/*
+	 * Pour exécuter l'analyse de la batterie remplacer le 0 par 1 ci-dessous.
+	 * Le code est non activé par défaut car il y a une collision de Timer
+	 * entre ce dernier et celui de la Girouette.
+	 */
+	#if 0
 	
 	Batterie_Init();
 	Handle_Batterie_Display();
 	Timer_Start_Interruption(2000, Handle_Batterie_Display);
+
+	#endif
 	
 	/* HANDLE IMU */
 	
-	
+	// IMU non traité.
 	
 	/* HANDLE GIROUETTE */
 	
